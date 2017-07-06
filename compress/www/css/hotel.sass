@@ -1,0 +1,136 @@
+@font-face
+  font-family: "iconfont"
+  src: url(../fonts/iconfont.svg)
+  src: url(../fonts/iconfont.woff)
+  src: url(../fonts/iconfont.ttf)
+  src: url(../fonts/iconfont.eot)
+
+body
+  font-size: .12rem
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  display: -webkit-flex
+  -webkit-flex-direction: column
+
+.header
+  font-size: .18rem
+  height: .44rem
+  line-height: .44rem
+  text-align: center
+  position: relative
+  border-bottom: 1px solid #ccc
+  background: #47D266
+  h3
+    color: #fff
+  #back
+    position: absolute
+    left: .1rem
+    top: 0
+    color: #ffffff
+    font-size: .16rem
+  .title-map
+    position: absolute
+    right: .1rem
+    top: 0
+    color: #ffffff
+    font-size: .14rem
+  .title-search
+    width: 70%
+    height: .3rem
+    line-height: .3rem
+    background: #ffffff
+    border-radius: .04rem
+    margin: .07rem auto 0
+    position: relative
+    span
+      position: absolute
+      left: .1rem
+    .title-text
+      position: absolute
+      right: .02rem
+      width: 85%
+      height: .28rem
+      border: none
+
+.content
+  -webkit-flex: 1
+  overflow-y: scroll
+  background: #F5F5F5
+  .distance
+    width: 100%
+    height: .4rem
+    line-height: .4rem
+    background: #949494
+    p
+      text-indent: .1rem
+      color: #ffffff
+  .detailed-list
+    width: 100%
+    height: auto
+    .detailed-list-wrapper
+      width: 100%
+      li
+        width: 100%
+        border-bottom: 1px solid #CCCCCC
+        dl
+          width: 100%
+          background: #ffffff
+          display: flex
+          position: relative
+          .hotel-price
+            position: absolute
+            right: .35rem
+            top: .4rem
+            color: #666666
+            span
+              color: #FF9A02
+          .hotel-kilo
+            position: absolute
+            right: .35rem
+            bottom: .4rem
+            color: #666666
+          #hotel-icon
+            position: absolute
+            right: .1rem
+            top: .5rem
+            color: #CCCCCC
+            font-weight: bold
+            font-size: .2rem
+          dt
+            width: 30%
+            margin: auto .1rem
+            img
+              width: 100%
+              height: auto
+.content .detailed-list .detailed-list-wrapper li dl .hotel-content
+  margin: .1rem 0
+  line-height: .24rem
+  h3
+    color: #666666
+  .limit-time
+    background: #FF9A02
+    padding: .01rem
+    color: #ffffff
+  p
+    color: #a3a3a3
+
+
+
+
+
+.footer
+  height: .5rem
+  text-align: center
+  border-top: 1px solid #ccc
+
+.footer-nav
+  display: -webkit-flex
+  margin-top: .05rem
+  a
+    -webkit-flex: 1
+    color: #7F7F7F
+    font-size: .16rem
+  a.active dl dt
+    color: #47D266

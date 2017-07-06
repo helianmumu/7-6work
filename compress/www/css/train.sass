@@ -1,0 +1,156 @@
+@font-face
+  font-family: "iconfont"
+  src: url(../fonts/iconfont.svg)
+  src: url(../fonts/iconfont.woff)
+  src: url(../fonts/iconfont.ttf)
+  src: url(../fonts/iconfont.eot)
+
+body
+  font-size: .12rem
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  display: -webkit-flex
+  -webkit-flex-direction: column
+
+.header
+  font-size: .18rem
+  height: .44rem
+  line-height: .44rem
+  text-align: center
+  position: relative
+  border-bottom: 1px solid #ccc
+  background: #47D266
+  h3
+    color: #fff
+  #back
+    position: absolute
+    left: .1rem
+    top: 0
+    color: #ffffff
+    font-size: .16rem
+
+.content
+  -webkit-flex: 1
+  overflow-y: scroll
+  background: #F5F5F5
+  .check-list
+    width: 100%
+    height: auto
+    margin: .1rem 0
+    .check-list-wrapper
+      width: 90%
+      height: .5rem
+      line-height: .5rem
+      margin: 0 5%
+      display: flex
+      li
+        flex: 1
+        text-align: center
+        font-size: .16rem
+        color: #333333
+        background: #ffffff
+      .check-list-slide-active
+        background: #47D265
+        color: #ffffff
+  .check-container
+    width: 100%
+    height: auto
+    margin-top: .2rem
+    border-top: 1px solid #666666
+    border-bottom: 1px solid #666666
+    background: #ffffff
+    .check-menu
+      width: 90%
+      .swiper-slide
+        width: 100%
+        li
+          width: 100%
+          height: .5rem
+          line-height: .5rem
+          border-bottom: 1px solid #666666
+          display: flex
+          position: relative
+          b
+            color: #666666
+            position: absolute
+            left: .1rem
+          h4
+            position: absolute
+            left: .4rem
+            font-size: .14rem
+            color: #666666
+          a
+            position: absolute
+            right: .1rem
+            font-size: .14rem
+            color: #333333
+            span
+              color: #CCCCCC
+              font-weight: bold
+          .toggle-select
+            position: absolute
+            right: .1rem
+            top: 0
+            input[type=checkbox]
+              display: none
+            input[type=checkbox]:checked + .track
+              background: #47D265
+              &>span
+                left: 0.25rem
+            .track
+              display: inline-block
+              width: 0.5rem
+              height: 0.25rem
+              border: 1px solid #cccccc
+              border-radius: 0.125rem
+              margin-top: .1rem
+              position: relative
+              span
+                position: absolute
+                left: 0
+                top: 0
+                display: inline-block
+                width: 0.24rem
+                height: 0.24rem
+                border: 1px solid #cccccc
+                border-radius: 0.12rem
+                background: #ffffff
+                transition: margin 1s
+  .search
+    width: 80%
+    height: .5rem
+    line-height: .5rem
+    margin: .5rem 10% 0
+    position: relative
+    span
+      position: absolute
+      left: 25%
+      top: 0
+      color: #ffffff
+      font-size: .2rem
+    .btn
+      width: 100%
+      height: .5rem
+      line-height: .5rem
+      text-align: center
+      background: #FF9A02
+      border: none
+      color: #ffffff
+      font-size: .2rem
+
+.footer
+  height: .5rem
+  text-align: center
+  border-top: 1px solid #ccc
+
+.footer-nav
+  display: -webkit-flex
+  margin-top: .05rem
+  a
+    -webkit-flex: 1
+    color: #7F7F7F
+    font-size: .16rem
+  a.active dl dt
+    color: #47D266

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angularJs</title>
+    <style>
+        .active{
+            color: pink;
+        }
+        .red{
+            color: red;
+        }
+        .purple{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!--<div ng-app="">
+        <div>
+            <input type="text" ng-model="name">
+            <p>{{name}}</p>
+        </div>
+    </div>-->
+    <div ng-app="myApp">
+        <div ng-controller="con">
+            <input type="text" ng-model="name">
+            <p>你的名字：{{name}}</p>
+            <input type="button" value="确定" ng-click="sure()">
+            <p ng-bind="writein"></p>
+            <div ng-class="active">fslkdjfsidufsdcjsldkufwer</div>
+            <div ng-class="{true:'red',false:'purple'}[mycolor]">dsfjlskdfusidutrslkjdflsudf</div>
+            <div ng-show="show">show123454687541315</div>
+            <div ng-hide="hide">hide123454687541315</div>
+
+            保留HTML：<input type="checkbox" ng-model="myVal" ng-init="myVal=true">
+            <div ng-if="myVal">
+                <h1>Welcome</h1>
+                <p>Welcome to my home.</p>
+            </div>
+
+            <table>
+                <caption>我的购物车</caption>
+                <tr>
+                    <th>序号</th>
+                    <th>商品</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                </tr>
+                <tr ng-repeat="item in items">
+                    <td>{{$index + 1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price | currency}}</td>
+                    <td><input ng-model="item.quantity"></td>
+                    <td>{{item.quantity * item.price | currency}}</td>
+                </tr>
+            </table>
+
+            <div ng-include="include.html"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('myApp',[]);
+        app.controller('con',function($scope){
+            $scope.name="hello";
+            $scope.sure=function(){
+                console.log($scope.name);
+            };
+            $scope.writein="hello world";
+            $scope.active="active";
+            $scope.mycolor=false;
+            $scope.show=false;
+            $scope.hide=false;
+            $scope.items = [
+                {name: "雷柏（Rapoo） V500 机械游戏键盘 机械黄轴", quantity: 1, price: 199.00},
+                {name: "雷柏（Rapoo） V20 光学游戏鼠标 黑色烈焰版", quantity: 1, price: 139.00},
+                {name: "AngularJS权威教程", quantity: 2, price: 84.20}
+            ];
+        })
+    </script>
+</body>
+</html>
